@@ -13,7 +13,7 @@ internal class Program
     {
         using var client = new TcpClient();
 
-        var hostname = "webcode.me";
+        var hostname = "example.com";
         client.Connect(hostname, 80);
 
         using var networkStream = client.GetStream();
@@ -26,7 +26,7 @@ Accept: text/html, charset=utf-8
 Accept-Language: en-US
 User-Agent: C# program
 Connection: close
-Host: webcode.me" + "\r\n\r\n";
+Host: example.com" + "\r\n\r\n";
 
         Console.WriteLine(message);
 
